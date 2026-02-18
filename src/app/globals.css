@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Қосымша негізгі стильдер */
+@layer base {
+  body {
+    background-color: #d23333; /* Сіз таңдаған ақ түс */
+    color: #111827; /* Сіз таңдаған қою сұр түс */
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  /* Батырмалар */
+  .btn-primary {
+    @apply bg-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold 
+           hover:bg-blue-700 transition-all active:scale-95 shadow-sm;
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-blue-600 px-6 py-2.5 rounded-lg font-semibold 
+           border-2 border-blue-600 hover:bg-blue-50 transition-all;
+  }
+
+  /* Инпуттар */
+  .input-style {
+    @apply w-full px-4 py-3 bg-white border border-gray-300 rounded-lg
+           focus:ring-2 focus:ring-blue-500 focus:border-transparent 
+           outline-none transition-all placeholder:text-gray-400;
+  }
+
+  /* Карточкалар */
+  .card {
+    @apply bg-white border border-gray-200 rounded-xl p-6 
+           shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+}
